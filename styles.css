@@ -14,6 +14,18 @@ body, html {
   background-size: cover;
 }
 
+.nav_demo {
+  position: fixed; /* This makes the navbar stay in place */
+  top: 0; /* Adjust this value to change the position of the navbar vertically */
+  width: 100%; /* Make sure it spans the full width of the screen */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.w3-bar-block a {
+  display: block;
+  padding: 16px;
+  text-align: center;
+}
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url('/w3images/parallax1.jpg');
