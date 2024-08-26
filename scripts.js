@@ -4,13 +4,13 @@ const navItems = document.querySelectorAll('.w3-bar-item.w3-button');
 navItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
         const itemRect = item.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
         
-        const blobX = itemRect.left + itemRect.width / 2 + scrollLeft;
-        const blobY = itemRect.top + itemRect.height / 2 + scrollTop;
+        // Calculate the fixed position based on the viewport
+        const blobX = itemRect.left + itemRect.width / 2;
+        const blobY = itemRect.top + itemRect.height / 2;
 
-        console.log(`Moving blob to X: ${blobX}, Y: ${blobY}`); // Debugging
+        // Debugging: Log the positions to the console
+        console.log(`Moving blob to X: ${blobX}, Y: ${blobY}`);
 
         // Move the blob to the center of the hovered menu item
         hoverBlob.style.left = `${blobX}px`;
@@ -18,13 +18,21 @@ navItems.forEach(item => {
         hoverBlob.style.transform = 'translate(-50%, -50%) scale(1)';
 
         // Optionally, change the blob's color
-        hoverBlob.style.backgroundColor = 'rgba(255, 99, 71, 0.8)';
+        const color = item.getAttribute('data-color');
+        hoverBlob.style.backgroundColor = color || 'rgba(255, 99, 71, 0.8)';
     });
 
     item.addEventListener('mouseleave', () => {
         hoverBlob.style.transform = 'translate(-50%, -50%) scale(0)'; // Hide the blob when not hovering
     });
 });
+
+
+ // You can use JavaScript to set the playback rate after the video metadata is loaded.
+ var video = document.getElementById('myVideo');
+ video.playbackRate = 0.75; // Slow down the video to 75% of the original speed.
+
+
 
 
 // Modal Image Gallery
