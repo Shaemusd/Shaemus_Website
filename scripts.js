@@ -30,7 +30,7 @@ navItems.forEach(item => {
 
  // You can use JavaScript to set the playback rate after the video metadata is loaded.
  var video = document.getElementById('myVideo');
- video.playbackRate = 0.75; // Slow down the video to 75% of the original speed.
+ video.playbackRate = 0.65; // Slow down the video to 75% of the original speed.
 
 
 

@@ -27,6 +27,8 @@
           class="fa fa-user"></i> ABOUT</a>
       <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" data-color="rgba(0, 123, 255, 0.7)"><i
           class="fa fa-th"></i> PORTFOLIO</a>
+      <a href="#skills" class="w3-bar-item w3-button w3-hide-small" data-color="rgba(0, 023, 255, 0.7)"><i
+          class="fa fa-th"></i> SKILLS</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hide-small" data-color="rgba(60, 179, 113, 0.7)"><i
           class="fa fa-envelope"></i> CONTACT</a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"
@@ -40,20 +42,21 @@
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium nav_demo">
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#skills" class="w3-bar-item w3-button" onclick="toggleFunction()">SKILLS</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
   </div>
 
   <!-- First Parallax Image with Logo Text -->
-  <div class="w3-opacity-min" id="home">
+  <div class="" id="home">
     <div class="video-container">
-    <video autoplay muted loop id="myVideo">
-      <source src="media/video/bg_orb_1080.mp4" type="video/mp4">
-      <img src="media/video/bg_orb_1080.mp4" alt="Fallback Image">
-      Your browser does not support HTML5 video.
-    </video>
-  </div>
+      <video autoplay muted loop id="myVideo">
+        <source src="media/video/bg_orb_1080.mp4" type="video/mp4">
+        <img src="media/video/bg_orb_1080.mp4" alt="Fallback Image">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
     <div class="w3-display-middle" style="white-space:nowrap;">
       <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span
           class="w3-hide-small">WEBSITE</span> LOGO</span>
@@ -77,8 +80,8 @@
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
         <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-        <img src="/media/image/Image20240826155412.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me"
-          width="500" height="333">
+        <img src="/media/image/Image20240826155412.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+          alt="Photo of Me" width="500" height="333">
       </div>
 
       <!-- Hide this text on small devices -->
@@ -201,6 +204,47 @@
       <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
     </div>
   </div>
+
+  <!-- SKILLS ADDED-->
+  <div class="w3-content w3-container w3-padding-64" id="skills">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Forth Parallax Image with Portfolio Text -->
+  <div class="bgimg-4 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+    </div>
+  </div>
+
 
   <!-- Container (Contact Section) -->
   <div class="w3-content w3-container w3-padding-64" id="contact">
