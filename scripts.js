@@ -63,3 +63,9 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+
+// DARK MODE TOGGLE
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }

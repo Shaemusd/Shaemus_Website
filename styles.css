@@ -1,3 +1,21 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+.dark-mode {
+  --background-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+
+
+
 body,
 h1,
 h2,
@@ -24,6 +42,12 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.max-h {
+  
+  max-width: 100%;
+  height: auto;
 }
 
 .nav_demo {
@@ -116,6 +140,17 @@ html {
   z-index: 1;
   /* Ensure buttons are above the blob */
 }
+
+button {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+}
+
 
 .hover-blob {
   position: fixed; /* Keep the blob within the viewport */
