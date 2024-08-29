@@ -122,6 +122,14 @@ html {
 
 .w3-button:hover {
   background-color: transparent !important;
+  
+}
+
+.btnx:hover {
+  color: rgb(119, 119, 119) !important;
+  transform: scale(1.2); /* Makes the button grow on hover */
+  
+  transition: transform 0.5s ease; /* Adds a transition effect */
 }
 
 .btn_1 {
@@ -153,17 +161,18 @@ a {
 
 
 .hover-blob {
+  opacity: 50%;
   position: fixed; /* Keep the blob within the viewport */
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.342), rgba(0, 0, 0, 0.8));
-  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0); /* Initially hidden */
   transition: transform 0.4s ease, left 0.4s ease, top 0.4s ease, background-color 1s ease;
   animation: extreme-jello 9s infinite ease-in-out;
-  z-index: 9999; /* Ensure it appears above all elements */
+  z-index: 4; /* Ensure it appears above all elements */
 }
 
 /* Keyframes for the more fluid and extreme jello-like animation */

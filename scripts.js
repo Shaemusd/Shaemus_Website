@@ -4,7 +4,7 @@ const navItems = document.querySelectorAll('.w3-bar-item.w3-button');
 navItems.forEach(item => {
     item.addEventListener('mouseenter', () => {
         const itemRect = item.getBoundingClientRect();
-        
+
         // Calculate the fixed position based on the viewport
         const blobX = itemRect.left + itemRect.width / 2;
         const blobY = itemRect.top + itemRect.height / 2;
@@ -28,23 +28,23 @@ navItems.forEach(item => {
 });
 
 
- // You can use JavaScript to set the playback rate after the video metadata is loaded.
- var video = document.getElementById('myVideo');
- video.playbackRate = 0.65; // Slow down the video to 75% of the original speed.
+// You can use JavaScript to set the playback rate after the video metadata is loaded.
+var video = document.getElementById('myVideo');
+video.playbackRate = 0.65; // Slow down the video to 75% of the original speed.
 
 
 
 
 // Modal Image Gallery
 function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
+window.onscroll = function () { myFunction() };
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -65,7 +65,22 @@ function toggleFunction() {
 }
 
 
-// DARK MODE TOGGLE
+// DARK MODE TOGGLE with button scale for blob effect
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-  }
+}
+
+const button = document.querySelector('.btnx');
+
+let timeout;
+
+button.addEventListener('mouseover', () => {
+    timeout = setTimeout(() => {
+        button.style.transform = 'scale(1.8)';
+    }, 150); // delay in milliseconds (0.5 seconds)
+});
+
+button.addEventListener('mouseout', () => {
+    clearTimeout(timeout); // stop the scaling if the user stops hovering
+    button.style.transform = 'scale(1)';
+});
